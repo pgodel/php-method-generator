@@ -1,0 +1,15 @@
+This script performs reflection on a PHP class and generates set/get methods for private/protected properties.
+
+# Single file
+
+# Usage: php generate_methods.php file class
+
+php generate_methods.php lib/ServerGrove/Project/MyClass.php 'ServerGrove\Project\MyClass'
+
+# Directory with multiple files
+
+# Usage: php generate_methods.php file namespace
+
+php generate_methods.php lib/ServerGrove/Project 'ServerGrove\Project'
+
+
