@@ -6,19 +6,19 @@ if (count($_SERVER['argv'])==1)
 
 # Single file PHP 5.2 class style
 
-php generate_methods.php lib/ServerGrove/Project/MyClass.php
+php php-method-generator.php lib/ServerGrove/Project/MyClass.php
 
 # Single file PHP 5.3 class style with namespace
 
-# Usage: php generate_methods.php file class
+# Usage: php php-method-generator.php file class
 
-php generate_methods.php lib/ServerGrove/Project/MyClass.php 'ServerGrove\Project\MyClass'
+php php-method-generator.php lib/ServerGrove/Project/MyClass.php 'ServerGrove\Project\MyClass'
 
 # Directory with multiple files
 
-# Usage: php generate_methods.php file namespace
+# Usage: php php-method-generator.php file namespace
 
-php generate_methods.php lib/ServerGrove/Project 'ServerGrove\Project'
+php php-method-generator.php lib/ServerGrove/Project 'ServerGrove\Project'
 
 
 ";
