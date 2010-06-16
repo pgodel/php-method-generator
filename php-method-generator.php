@@ -3,7 +3,12 @@
 if (count($_SERVER['argv'])==1)
 {
   echo "
-# Single file
+
+# Single file PHP 5.2 class style
+
+php generate_methods.php lib/ServerGrove/Project/MyClass.php
+
+# Single file PHP 5.3 class style with namespace
 
 # Usage: php generate_methods.php file class
 
@@ -22,10 +27,17 @@ php generate_methods.php lib/ServerGrove/Project 'ServerGrove\Project'
 }
 
 $path = $_SERVER['argv'][1];
-$class = $_SERVER['argv'][2];
 
-function process($path, $class)
+$class = '';
+if (!empty($_SERVER['argv'][2])) $class = $_SERVER['argv'][2];
+
+function process($path, $class='')
 {
+
+  if (empty($class))
+  {
+    $class = str_replace('.php', '', basename($path));
+  }
 
   echo "Processing $class @ $path\n";
 
